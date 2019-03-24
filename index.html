@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Meta info -->
+    <meta name="MobileOptimized" content="320" />
+    <meta content="text/html" charset="utf-8" http-equiv="content-type">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0,
+            width=device-width, user-scalable=no" />
+
+    <!-- Title, icon and style -->
+    <title>Tap Tap Bug</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/food.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Calls restoreScore on load -->
+<body onload="restoreScore()">
+
+    <!-- The start page -->
+    <section id="start_page">
+        <h1>Welcome to Tap Tap Bug</h1>
+        <p>
+            SELECT A LEVEL :
+        </p>
+
+        <!-- Two radio buttons for selecting levels -->
+        <div id="level_select">
+            <label for="level_one">
+                <input type="radio" value="level_one" name="level_selector"
+                        id="level_one" checked="checked" onclick="restoreScore()">
+                <span>1</span>
+            </label>
+
+            <label for="level_two">
+                <input type="radio" value="level_two" name="level_selector"
+                        id="level_two" onclick="restoreScore()">
+                <span>2</span>
+            </label>
+        </div>
+
+        <!-- Two divs for showing different high scores -->
+        <p>
+            HIGH SCORE :
+        </p>
+        <div id="high_score">
+            <div id="high_one"></div>
+            <div id="high_two"></div>
+        </div>
+
+        <!-- Start button -->
+        <button id="start_button" type="button" onclick="startGame()">
+            Start!
+        </button>
+    </section>
+
+    <!-- The game section -->
+    <section id="main_game">
+        <canvas id="game" width="400" height="700">
+            Your browser does not support the canvas element.
+        </canvas>
+
+        <img id="food" alt="food" src="./images/food.png" />
+    </section>
+
+    <!-- The end page section -->
+    <section id="end_page">
+        <h1 id="end_title">Game Over : (</h1>
+        <div id="your_score"></div>
+
+        <button id="restart_button" type="button">
+            Restart !
+        </button>
+        <button id="exit_button" type="button" onclick="exitGame()">
+            OK
+        </button>
+    </section>
+
+    <!-- The script file -->
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

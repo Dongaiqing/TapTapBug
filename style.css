@@ -1,0 +1,198 @@
+/* import font from google fonts */
+@import url(http://fonts.googleapis.com/css?family=Cabin:700);
+
+body {
+    font-family: Cabin, Verdana, Geneva, sans-serif;
+    background-color: #FFC65D;
+    text-align: center;
+    color: white;
+}
+h1 {
+    font-size: 50px;
+}
+p {
+    font-size: 20px;
+}
+#end_page {
+    display: none;
+}
+#high_score, #your_score {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+#food {
+    visibility: hidden;
+}
+#main_game {
+    display: none;
+}
+#start_page, #end_page {
+    position: relative;
+    box-shadow: 5px 5px 30px #404040;
+    background: #4CC3D9;
+    margin: 120px 200px 30px 200px;
+    padding: 20px 20px 40px 20px;
+    border-style: dashed;
+    border-radius: 40px;
+    border-width: thick;
+}
+button {
+    border: none;
+    display: inline;
+    font-family: Cabin, Verdana, Geneva, sans-serif;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 15px 40px 15px 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+    cursor: pointer;
+    background-color: #F16745;
+    transition: .2s;
+    width: 200px;
+}
+button:hover {
+    box-shadow: 0px 0px 10px #404040;
+    background-color: #72BA98;
+    transition: .2s;
+}
+#info_bar {
+    float: center;
+    width: 400px;
+    background-color: #F4AC42;
+    padding-bottom: 20px;
+    display: inline-block;
+    margin: 0 auto;
+}
+#info_bar * {
+    display: inline-block;
+}
+canvas {
+    box-shadow: 0px 0px 20px grey;
+    background: #72BA98;
+    margin-top: 50px;
+    border-radius: 20px 20px 3px 3px;
+    border-width: thick;
+}
+
+/* Styling for two radio buttons */
+[type="radio"] {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+label {
+    display: inline;
+    cursor: pointer;
+    line-height: 2.5;
+    font-size: 20px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+[type="radio"] + span {
+    display: inline;
+}
+[type="radio"] + span:before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.25em;
+    border-radius: 1em;
+    border: 0.1em solid #FFF;
+    box-shadow: 0 0 0 0.15em #FFF;
+    margin-right: 0.75em;
+    transition: 0.3s;
+}
+[type="radio"]:checked + span:before {
+    background: #72BA98;
+    box-shadow: 0 0 0 0.25em #FFF;
+}
+
+/* Media queries */
+@media screen and (max-width: 750px) {
+    #start_page, #end_page {
+        position: relative;
+        margin: 10px 20px 10px 20px;
+        padding: 20px 20px 60px 20px;
+        border-style: dashed;
+        border-radius: 40px;
+        border-width: thick;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    p {
+        font-size: 20px;
+    }
+    button {
+        width: 150px;
+    }
+    #high_score {
+        font-size: 30px;
+    }
+    label span {
+        font-size: 20px;
+    }
+    p {
+        margin-bottom: 10px;
+    }
+    button {
+        font-size: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    canvas {
+        margin-top: 10px;
+    }
+}
+@media screen and (max-height: 600px) {
+    #start_page, #end_page {
+        margin: 20px 20px 10px 20px;
+        padding: 0px 20px 25px 20px;
+        border-style: dashed;
+        border-radius: 40px;
+        border-width: thick;
+    }
+    h1 {
+        font-size: 35px;
+        margin-top: 15px;
+    }
+    p {
+        font-size: 20px;
+    }
+    #high_score {
+        font-size: 30px;
+    }
+    label span {
+        font-size: 20px;
+    }
+    p {
+        margin-bottom: 10px;
+    }
+    button {
+        font-size: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    canvas {
+        margin-top: 5px;
+    }
+}
+@media screen and (max-height: 800px) {
+    #start_page, #end_page {
+        margin: 100px 150px 30px 150px;
+        padding: 0px 20px 25px 20px;
+        border-style: dashed;
+        border-radius: 40px;
+        border-width: thick;
+    }
+    canvas {
+        margin-top: 5px;
+    }
+}
